@@ -93,7 +93,7 @@ class _SearchState extends State<SearchList> {
     } else if (_error != null) {
       return CenterTitle(_error);
     } else if (_searchQuery.text.isEmpty) {
-      return CenterTitle('Begin Search by typing on search bar');
+      return CenterTitle('Type your search');
     } else {
       return ListView.builder(
           padding: EdgeInsets.symmetric(vertical: 8.0),
@@ -117,7 +117,7 @@ class CenterTitle extends StatelessWidget {
         alignment: Alignment.center,
         child: Text(
           title,
-          style: Theme.of(context).textTheme.headline,
+          style: Theme.of(context).textTheme.headline5,
           textAlign: TextAlign.center,
         ));
   }

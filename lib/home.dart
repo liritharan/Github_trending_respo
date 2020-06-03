@@ -47,18 +47,8 @@ class _HomeState extends State<Home> {
             margin: EdgeInsets.only(top: 4.0),
             child: Column(
               children: <Widget>[
-                Text('Github Repos',
-                    style: Theme
-                        .of(context)
-                        .textTheme
-                        .headline
-                        .apply(color: Colors.white)),
-                Text('Trending',
-                    style: Theme
-                        .of(context)
-                        .textTheme
-                        .subhead
-                        .apply(color: Colors.white))
+                Text('Github Repos',),
+                Text('Trending',)
               ],
             )),
         centerTitle: true,
@@ -81,14 +71,13 @@ class _HomeState extends State<Home> {
   Widget buildBody(BuildContext context) {
     if (_isFetching) {
       return Container(
-          alignment: Alignment.center, child: Icon(Icons.timelapse));
+          alignment: Alignment.center, child: Icon(Icons.hourglass_empty));
     } else if (_error != null) {
       return Container(
           alignment: Alignment.center,
           child: Text(
             _error,
-            style: Theme.of(context).textTheme.headline,
-          ));
+             ));
     } else {
       return ListView.builder(
           padding: EdgeInsets.symmetric(vertical: 8.0),

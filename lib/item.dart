@@ -21,14 +21,14 @@ class GithubItem extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
                   Text((repo.name != null) ? repo.name : '-',
-                      style: Theme.of(context).textTheme.subhead),
+                      style: Theme.of(context).textTheme.subtitle1),
                   Padding(
                     padding: EdgeInsets.only(top: 4.0),
                     child: Text(
                         repo.description != null
                             ? repo.description
                             : 'No desription',
-                        style: Theme.of(context).textTheme.body1),
+                        style: Theme.of(context).textTheme.bodyText2),
                   ),
                   Padding(
                     padding: EdgeInsets.only(top: 8.0),
